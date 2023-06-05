@@ -39,5 +39,8 @@ elif select in names:
 
 links = get_data(select[0])
 
+if len(links) == 0:
+    links = get_data(select[1])
+
 for link in links:
     st.markdown(f"{link}\n")
