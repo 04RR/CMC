@@ -27,7 +27,7 @@ def get_data(slug):
 slugs = [x["slug"] for x in data]
 names = [x["name"] for x in data]
 
-st.title("DYOR - Do Your Own Research")
+st.title("DYOR")
 
 select = st.selectbox("Select a crypto", slugs + names)
 
@@ -41,6 +41,8 @@ links = get_data(select[0])
 
 if len(links) == 0:
     links = get_data(select[1])
+
+st.subheader(f"Start with the links below!\n")
 
 for link in links:
     st.markdown(f"{link}\n")
