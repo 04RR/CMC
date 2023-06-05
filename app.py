@@ -29,7 +29,7 @@ names = [x["name"] for x in data]
 
 st.title("DYOR")
 
-select = st.selectbox("Select a crypto", slugs + names)
+select = st.selectbox("Select a crypto", slugs)
 
 if select in slugs:
     select = select, names[slugs.index(select)]
