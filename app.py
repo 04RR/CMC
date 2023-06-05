@@ -42,7 +42,7 @@ links = get_data(select[0])
 if len(links) == 0:
     links = get_data(select[1])
 
-st.subheader(f"Start with the links below!\n")
-
-for link in links:
+for i, link in enumerate(links):
+    if i == 0:
+        st.subheader(f"Start with the links below!\n")
     st.markdown(f"{link}\n")
